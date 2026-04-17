@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Quiz</title>
+  <style>
+    /* Body & container */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 20px;
+      background: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    .quiz-container {
+      background: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+      width: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .quiz-container:hover {
+      transform: translateY(-3px);
+    }
+
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+      font-size: 26px;
+    }
+
+    p.question {
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #34495e;
+    }
+
+    label {
+      display: block;
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    label:hover {
+      background: #e8f0fe;
+      border-color: #4a90e2;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+      accent-color: #4a90e2;
+    }
+
+    .correct {
+      background-color: #e6f7e6 !important;
+      border-color: #28a745 !important;
+      color: #155724;
+      font-weight: bold;
+    }
+
+    .wrong {
+      background-color: #fce8e6 !important;
+      border-color: #dc3545 !important;
+      color: #721c24;
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #357ab8;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      text-align: center;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+	
+	
+  </style>
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h2>இரண்டாம் பருவம் - Part 1 </h2>
+    <form id="quiz">
+	
+	<div class="question-block">
+      <p class="question">1.  நிலவின் குளிர்ச்சியையும் கதிரவனின் வெம்மையையும், மழையின் பயனையும் __________________ நூல் போற்றுகிறது.</p>
+      <label><input type="radio" name="q1" value="ஐங்குறுநூறு">ஐங்குறுநூறு</label>
+      <label><input type="radio" name="q1" value="கலிங்கத்துப்பரணி">கலிங்கத்துப்பரணி</label>
+	  <label><input type="radio" name="q1" value="நான்மணிக்கடிகை">நான்மணிக்கடிகை</label>
+	  <label><input type="radio" name="q1" value="சிலப்பதிகாரம்">சிலப்பதிகாரம்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">2. திங்களைப் போற்றுதும் திங்களைப் போற்றுதும் கொங்கு அலர்தார்ச் சென்னி குளிர் வெண்குடை போன்று இவ் அங்கண் உலகு அளித்தலான் – இந்த பாடல் வரி இடம்பெற்றுள்ள நூல் மற்றும் ஆசிரியர் பெயர்?</p>
+      <label><input type="radio" name="q2" value="மணிமேகலை, சீத்தலைச் சாத்தனார்">மணிமேகலை, சீத்தலைச் சாத்தனார்</label>
+      <label><input type="radio" name="q2" value="குண்டலகேசி, நாதகுத்தனார்">குண்டலகேசி, நாதகுத்தனார்</label>
+	  <label><input type="radio" name="q2" value="சீவக சிந்தாமணி, திருத்தக்க தேவர்">சீவக சிந்தாமணி, திருத்தக்க தேவர்</label>
+      <label><input type="radio" name="q2" value="சிலப்பதிகாரம், இளங்கோவடிகள்">சிலப்பதிகாரம், இளங்கோவடிகள்</label><br>
+	</div>
+	
+	<div class="question-block">
+      <p class="question">3. ஞாயிறு போற்றுதும் ஞாயிறு போற்றுதும் காவிரி நாடன் திகிரி போல் பொற்கோட்டு மேரு வலம் திரிதலான் – இந்த பாடல் வரி இடம்பெற்றுள்ள நூல் மற்றும் ஆசிரியர் பெயர்?</p><br>
+      <label><input type="radio" name="q3" value="மணிமேகலை, சீத்தலைச் சாத்தனார்">மணிமேகலை, சீத்தலைச் சாத்தனார்</label>
+      <label><input type="radio" name="q3" value="குண்டலகேசி, நாதகுத்தனார்">குண்டலகேசி, நாதகுத்தனார்</label>
+	  <label><input type="radio" name="q3" value="சீவக சிந்தாமணி, திருத்தக்க தேவர்">சீவக சிந்தாமணி, திருத்தக்க தேவர்</label>
+      <label><input type="radio" name="q3" value="சிலப்பதிகாரம், இளங்கோவடிகள்">சிலப்பதிகாரம், இளங்கோவடிகள்</label><br>
+	</div>
+	
+	<div class="question-block">
+      <p class="question">4. மாமழை போற்றுதும் மாமழை போற்றுதும் நாம நீர் வேலி உலகிற்கு அவன் அளிபோல் மேல்நின்று தான் சுரத்தலான் – இந்த பாடல் வரி இடம்பெற்றுள்ள நூல் மற்றும் ஆசிரியர் பெயர்?</p>
+      <label><input type="radio" name="q4" value="மணிமேகலை, சீத்தலைச் சாத்தனார்">மணிமேகலை, சீத்தலைச் சாத்தனார்</label>
+      <label><input type="radio" name="q4" value="குண்டலகேசி, நாதகுத்தனார்">குண்டலகேசி, நாதகுத்தனார்</label>
+	  <label><input type="radio" name="q4" value="சீவக சிந்தாமணி, திருத்தக்க தேவர்">சீவக சிந்தாமணி, திருத்தக்க தேவர்</label>
+      <label><input type="radio" name="q4" value="சிலப்பதிகாரம், இளங்கோவடிகள்">சிலப்பதிகாரம், இளங்கோவடிகள்</label><br>
+	</div>
+	
+    <div class="question-block">
+      <p class="question">5. வான் நிலா போற்றுவோம்! வான்நிலா போற்றுவோம்! மாலை அணிந்த சோழனின் குளிர்ந்த வெண்குடை போல அருளை வழங்கும் வான்நிலா போற்றுவோம்! வான்நிலா போற்றுவோம்! – இந்த பாடல் வரி இடம்பெற்றுள்ள நூல் மற்றும் ஆசிரியர் பெயர்?</p>
+      <label><input type="radio" name="q5" value="மணிமேகலை, சீத்தலைச் சாத்தனார்">மணிமேகலை, சீத்தலைச் சாத்தனார்</label>
+      <label><input type="radio" name="q5" value="குண்டலகேசி, நாதகுத்தனார்">குண்டலகேசி, நாதகுத்தனார்</label>
+	  <label><input type="radio" name="q5" value="சீவக சிந்தாமணி, திருத்தக்க தேவர்">சீவக சிந்தாமணி, திருத்தக்க தேவர்</label>
+      <label><input type="radio" name="q5" value="சிலப்பதிகாரம், இளங்கோவடிகள்">சிலப்பதிகாரம், இளங்கோவடிகள்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">6. கதிரவன் போற்றுவோம்! கதிரவன் போற்றுவோம்! காவிரி நாடன் சோழனின் ஆணைச் சக்கரம் போலவே இமயத்தை வலம்வரும் கதிரவன் போற்றுவோம்! கதிரவன் போற்றுவோம்! – இந்த பாடல் வரி இடம்பெற்றுள்ள நூல் மற்றும் ஆசிரியர் பெயர்?</p>
+      <label><input type="radio" name="q6" value="மணிமேகலை, சீத்தலைச் சாத்தனார்">மணிமேகலை, சீத்தலைச் சாத்தனார்</label>
+      <label><input type="radio" name="q6" value="குண்டலகேசி, நாதகுத்தனார்">குண்டலகேசி, நாதகுத்தனார்</label>
+	  <label><input type="radio" name="q6" value="சீவக சிந்தாமணி, திருத்தக்க தேவர்">சீவக சிந்தாமணி, திருத்தக்க தேவர்</label>
+      <label><input type="radio" name="q6" value="சிலப்பதிகாரம், இளங்கோவடிகள்">சிலப்பதிகாரம், இளங்கோவடிகள்</label><br>
+	</div>
+	
+    <div class="question-block">
+      <p class="question">7. வான்மழை போற்றுவோம்! வான்மழை போற்றுவோம்! கடல்சூழ் உலகுக்கு அருளைப் பொழியும் மன்னனைப் போல முகில்வழி சுரக்கும் வான்மழை போற்றுவோம்! வான்மழை போற்றுவோம்! – இந்த பாடல் வரி இடம்பெற்றுள்ள நூல் மற்றும் ஆசிரியர் பெயர்?</p><br>
+	  <label><input type="radio" name="q7" value="மணிமேகலை, சீத்தலைச் சாத்தனார்">மணிமேகலை, சீத்தலைச் சாத்தனார்</label>
+      <label><input type="radio" name="q7" value="குண்டலகேசி, நாதகுத்தனார்">குண்டலகேசி, நாதகுத்தனார்</label>
+	  <label><input type="radio" name="q7" value="சீவக சிந்தாமணி, திருத்தக்க தேவர்">சீவக சிந்தாமணி, திருத்தக்க தேவர்</label>
+      <label><input type="radio" name="q7" value="சிலப்பதிகாரம், இளங்கோவடிகள்">சிலப்பதிகாரம், இளங்கோவடிகள்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">8. கீழ்க்கண்டவற்றுள் சரியானது எது?</p></br>
+	  <p>I. திங்கள் – நிலவு</p>
+	  <p>II. கொங்கு – மகரந்தம்</p>
+	  <p>அலர் – மலர்தல்</p>
+	  <p>திகிரி – ஆணைச்சக்கரம்</p>
+      <label><input type="radio" name="q8" value="I, II, III மட்டும் சரி">I, II, III மட்டும் சரி</label>
+      <label><input type="radio" name="q8" value="I, II, III, IV அனைத்தும் சரி">I, II, III, IV அனைத்தும் சரி</label>
+	  <label><input type="radio" name="q8" value="III, IV மட்டும் சரி">III, IV மட்டும் சரி</label>
+      <label><input type="radio" name="q8" value="II, III, IV மட்டும் சரி">II, III, IV மட்டும் சரி</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">9. கீழ்க்கண்டவற்றுள் சரியானது எது?</p><br>
+	  <p>I. பொற்கோட்டு – பொன்மயமான சிகரத்தில்</p>
+	  <p>II. மேரு – இமயமலை</p>
+	  <p>III. நாமநீர் – அச்சம் தரும் கடல்</p>
+	  <p>IV. அளி – கருணை</p>
+      <label><input type="radio" name="q9" value="I, II, III, IV அனைத்தும் சரி">I, II, III, IV அனைத்தும் சரி</label>
+      <label><input type="radio" name="q9" value="I, II, III மட்டும் சரி">I, II, III மட்டும் சரி</label>
+	  <label><input type="radio" name="q9" value="III, IV மட்டும் சரி">III, IV மட்டும் சரி</label>
+      <label><input type="radio" name="q9" value="II, III, IV மட்டும் சரி">II, III, IV மட்டும் சரி</label><br>
+	</div>
+	
+    <div class="question-block">
+      <p class="question">10. தேன் நிறைந்த ஆத்திமலர் மாலையை அணிந்தவன் ___________ மன்னன்.</p>
+      <label><input type="radio" name="q10" value="சேர">சேர</label>
+      <label><input type="radio" name="q10" value="சோழ">சோழ</label>
+	  <label><input type="radio" name="q10" value="பாண்டியன்">பாண்டியன்</label>
+      <label><input type="radio" name="q10" value="பல்லவன்">பல்லவன்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">11. ______________ மன்னனுடைய வெண்கொற்றக் குடை குளிர்ச்சி பொருந்தியது. அதைப் போலவே வெண்ணிலவும் தன் ஒளியால் உலகுக்கு இன்பம் அளிக்கிறது. அதனால் வெண்ணிலவைப் போற்றுவோம் என்று இளங்கோவடிகள் கூறுகிறார்.</p><br>
+      <label><input type="radio" name="q11" value="பல்லவ">பல்லவ</label>
+      <label><input type="radio" name="q11" value="பாண்டிய">பாண்டிய</label>
+	  <label><input type="radio" name="q11" value="சேர">சேர</label>
+      <label><input type="radio" name="q11" value="சோழ">சோழ</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">12. காவிரி ஆறு பாய்ந்து வளம் செய்யும் நாட்டை ஆட்சி செய்பவன் __________ மன்னன். அவனது ஆணைச் சக்கரம் போல, கதிரவனும் பொன்போன்ற சிகரங்களையுடைய இமயமலையை வலப்புறமாகச் சுற்றிவருகிறது. அதனால் கதிரவனைப் போற்றுவோம்.</p><br>
+      <label><input type="radio" name="q12" value="பல்லவ">பல்லவ</label>
+      <label><input type="radio" name="q12" value="பாண்டிய">பாண்டிய</label>
+	  <label><input type="radio" name="q12" value="சேர">சேர</label>
+      <label><input type="radio" name="q12" value="சோழ">சோழ</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">13. சிலப்பதிகாரம் என்னும் காப்பியத்தை இயற்றியவர் _______________.</p>
+      <label><input type="radio" name="q13" value="இளங்கோவடிகள்">இளங்கோவடிகள்</label>
+      <label><input type="radio" name="q13" value="சீத்தலைச் சாத்தனார்">சீத்தலைச் சாத்தனார்</label>
+	  <label><input type="radio" name="q13" value="செயங்கொண்டார்">செயங்கொண்டார்</label>
+      <label><input type="radio" name="q13" value="கம்பர்">கம்பர்</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">14. இளங்கோவடிகள் ___________ மன்னர் மரபைச் சேர்ந்தவர் என்று சிலப்பதிகாரப் பதிகம் கூறுகிறது.</p><br>
+      <label><input type="radio" name="q14" value="பல்லவ">பல்லவ</label>
+      <label><input type="radio" name="q14" value="பாண்டிய">பாண்டிய</label>
+	  <label><input type="radio" name="q14" value="சேர">சேர</label>
+      <label><input type="radio" name="q14" value="சோழ">சோழ</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">15. இளங்கோவடிகள் அவர்களின் காலம்?</p><br>
+      <label><input type="radio" name="q15" value="கி.பி. இரண்டாம் நூற்றாண்டு">கி.பி. இரண்டாம் நூற்றாண்டு</label>
+      <label><input type="radio" name="q15" value="கி.பி. மூன்றாம் நூற்றாண்டு">கி.பி. மூன்றாம் நூற்றாண்டு</label>
+	  <label><input type="radio" name="q15" value="கி.பி. நான்காம் நூற்றாண்டு">கி.பி. நான்காம் நூற்றாண்டு</label>
+      <label><input type="radio" name="q15" value="கி.பி. ஐந்தாம் நூற்றாண்டு">கி.பி. ஐந்தாம் நூற்றாண்டு</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">16. கீழ்க்கண்டவற்றுள் ஐம்பெருங்காப்பியங்கள் ஒன்று உள்ளது. அது எது?</p>
+      <label><input type="radio" name="q16" value="குறுந்தொகை">குறுந்தொகை</label>
+      <label><input type="radio" name="q16" value="நற்றிணை">நற்றிணை</label>
+	  <label><input type="radio" name="q16" value="சிலப்பதிகாரம்">சிலப்பதிகாரம்</label>
+      <label><input type="radio" name="q16" value="கலிங்கத்துப்பரணி">கலிங்கத்துப்பரணி</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">17. தமிழின் முதல் காப்பியம் எது?</p>
+      <label><input type="radio" name="q17" value="குறுந்தொகை">குறுந்தொகை</label>
+      <label><input type="radio" name="q17" value="நற்றிணை">நற்றிணை</label>
+	  <label><input type="radio" name="q17" value="சிலப்பதிகாரம்">சிலப்பதிகாரம்</label>
+      <label><input type="radio" name="q17" value="கலிங்கத்துப்பரணி">கலிங்கத்துப்பரணி</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">18. முத்தமிழ்க் காப்பியம், குடிமக்கள் காப்பியம் என்றெல்லாம் போற்றப்படுகிற நூல் எது?</p>
+      <label><input type="radio" name="q18" value="சிலப்பதிகாரம்">சிலப்பதிகாரம்</label>
+      <label><input type="radio" name="q18" value="கம்பராமாயணம்">கம்பராமாயணம்</label>
+	  <label><input type="radio" name="q18" value="வளையாபதி">வளையாபதி</label>
+      <label><input type="radio" name="q18" value="குண்டலகேசி">குண்டலகேசி</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">19. இரட்டைக் காப்பியங்கள் என்று அழைக்கப்படுபவை எவை?</p>
+      <label><input type="radio" name="q19" value="வளையாபதி மற்றும் குண்டலகேசி">வளையாபதி மற்றும் குண்டலகேசி</label>
+      <label><input type="radio" name="q19" value="கம்பராமாயணம் மற்றும் பாஞ்சாலி சபதம்">கம்பராமாயணம் மற்றும் பாஞ்சாலி சபதம்</label>
+	  <label><input type="radio" name="q19" value="சிலப்பதிகாரம் மற்றும் மணிமேகலை">சிலப்பதிகாரம் மற்றும் மணிமேகலை</label>
+      <label><input type="radio" name="q19" value="இவற்றில் ஏதுமில்லை">இவற்றில் ஏதுமில்லை</label><br>
+	</div>
+
+    <div class="question-block">
+      <p class="question">20. திங்கள், ஞாயிறு, மழை என இயற்கையை வாழ்த்துவதாக ____________ நூல் தொடங்குகிறது.</p>
+      <label><input type="radio" name="q20" value="சிலப்பதிகாரம்">சிலப்பதிகாரம்</label>
+      <label><input type="radio" name="q20" value="கம்பராமாயணம்">கம்பராமாயணம்</label>
+	  <label><input type="radio" name="q20" value="வளையாபதி">வளையாபதி</label>
+      <label><input type="radio" name="q20" value="குண்டலகேசி">குண்டலகேசி</label><br>
+	</div>
+
+    
+  <button type="button" onclick="checkAnswers()">சரிபார்க்கவும்</button>
+  
+  </form>
+
+
+<h3 id="result"></h3>
+
+</div>
+
+  <script>
+function checkAnswers() {
+  let score = 0;
+
+  const answers = {
+    q1: "சிலப்பதிகாரம்",
+    q2: "சிலப்பதிகாரம், இளங்கோவடிகள்",
+    q3: "சிலப்பதிகாரம், இளங்கோவடிகள்",
+    q4: "சிலப்பதிகாரம், இளங்கோவடிகள்",
+    q5: "சிலப்பதிகாரம், இளங்கோவடிகள்",
+    q6: "சிலப்பதிகாரம், இளங்கோவடிகள்",
+    q7: "சிலப்பதிகாரம், இளங்கோவடிகள்",
+    q8: "I, II, III, IV அனைத்தும் சரி",
+    q9: "I, II, III, IV அனைத்தும் சரி",
+    q10: "சோழ",
+    q11: "சோழ",
+    q12: "சோழ",
+    q13: "இளங்கோவடிகள்",
+    q14: "சேர",
+    q15: "கி.பி. இரண்டாம் நூற்றாண்டு",
+    q16: "சிலப்பதிகாரம்",
+    q17: "சிலப்பதிகாரம்",
+    q18: "சிலப்பதிகாரம்",
+    q19: "சிலப்பதிகாரம் மற்றும் மணிமேகலை",
+    q20: "சிலப்பதிகாரம்"
+  };
+
+  let unanswered = [];
+
+  // ✅ Step 1: Check unanswered மட்டும்
+  for (let q in answers) {
+    let selected = document.querySelector(`input[name="${q}"]:checked`);
+    if (!selected) {
+      unanswered.push(q);
+    }
+  }
+
+  // 🚨 If any unanswered → STOP here
+  if (unanswered.length > 0) {
+    document.getElementById("result").style.color = "red";
+    document.getElementById("result").innerText =
+      "தயவுசெய்து அனைத்து கேள்விகளுக்கும் பதிலளிக்கவும்! விடுபட்டவை: " +
+      unanswered.join(", ");
+    return;
+  }
+
+  // ✅ Step 2: Now do highlighting + score
+  for (let q in answers) {
+    let options = document.querySelectorAll(`input[name="${q}"]`);
+
+    options.forEach(option => {
+      let label = option.parentElement;
+      label.classList.remove("correct", "wrong");
+
+      if (option.value === answers[q]) {
+        label.classList.add("correct");
+      }
+
+      if (option.checked) {
+        if (option.value === answers[q]) {
+          score++;
+        } else {
+          label.classList.add("wrong");
+        }
+      }
+    });
+  }
+
+  // ✅ Final score
+  document.getElementById("result").style.color = "green";
+  document.getElementById("result").innerText =
+    "உங்கள் மதிப்பெண்: " + score + "/" + Object.keys(answers).length;
+}
+
+</script>
+</body>
+</html>
